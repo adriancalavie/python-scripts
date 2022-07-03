@@ -5,9 +5,10 @@ generated_files_location = "./generated_files/.wav/"
 
 def generate_wave_file(frequency: int, time: float, sample_rate: int):
     """
-    It takes a frequency, time, and sample rate, and creates a .wav file with the given parameters
-
-    :param frequency: The frequency of the wave in Hz
+    It takes a frequency, time, and sample rate as input, and generates a wave file with the given
+    frequency, time, and sample rate.
+    
+    :param frequency: The frequency of the wave you want to generate
     :type frequency: int
     :param time: The length of the audio file in seconds
     :type time: float
