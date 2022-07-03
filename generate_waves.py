@@ -1,6 +1,7 @@
 import numpy as np
 from scipy.io import wavfile
 
+generated_files_location = "./generated_files/.wav/"
 
 def generate_wave_file(frequency: int, time: float, sample_rate: int):
     """
@@ -20,7 +21,8 @@ def generate_wave_file(frequency: int, time: float, sample_rate: int):
     signal *= 32767
     signal = np.int16(signal)
 
-    wavfile.write(str(input("Name your audio: ")), sample_rate, signal)
+    file_name = input("Name your audio: ")
+    wavfile.write(generated_files_location + file_name, sample_rate, signal)
 
 
 def run():
@@ -36,5 +38,5 @@ def run():
     generate_wave_file(frequency, time, sample_rate)
 
 
-if __name__ == 'main':
+if __name__ == '__main__':
     run()
